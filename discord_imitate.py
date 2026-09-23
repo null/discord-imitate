@@ -241,7 +241,7 @@ class DiscordWebsocket:
 
     def add_reaction(self, data: dict) -> None:
         response = put(
-            f"https://discord.com/api/v9/channels/{data['channel_id']}/messages/{data['message_id']}/reactions/{self.format_emoji(data["emoji"])}/@me",
+            f"https://discord.com/api/v9/channels/{data['channel_id']}/messages/{data['message_id']}/reactions/{self.format_emoji(data['emoji'])}/@me",
             headers={"Authorization": self.config["token"]}
         )
 
@@ -262,7 +262,7 @@ class DiscordWebsocket:
 
     def remove_reaction(self, data: dict) -> None:
         response = delete(
-            f"https://discord.com/api/v9/channels/{data['channel_id']}/messages/{data['message_id']}/reactions/{self.format_emoji(data["emoji"])}/@me",
+            f"https://discord.com/api/v9/channels/{data['channel_id']}/messages/{data['message_id']}/reactions/{self.format_emoji(data['emoji'])}/@me",
             headers={"Authorization": self.config["token"]}
         )
 
